@@ -1,9 +1,12 @@
 package com.gatia.spring.introduction;
 
-public class BinarySearchAlgorithm {
+import org.springframework.stereotype.Component;
+
+@Component
+public class BinarySearchImpl {
     protected SortAlgorithm sortAlgorithm;
 
-    public BinarySearchAlgorithm(SortAlgorithm sortAlgorithm) {
+    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
         this.sortAlgorithm = sortAlgorithm;
     }
 

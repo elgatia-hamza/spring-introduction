@@ -2,14 +2,16 @@ package com.gatia.spring.introduction;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(Application.class, args);
-		BinarySearchAlgorithm binarySearchAlgorithm = new BinarySearchAlgorithm(new QuickSortAlgorithm());
-		System.out.println(binarySearchAlgorithm.binarySearch(new int[] {3,1,4,2,5},2));
+		ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+		BinarySearchImpl binarySearchAlgorithm = applicationContext.getBean(BinarySearchImpl.class);
+		int result = binarySearchAlgorithm.binarySearch(new int[] {3,1,4,2,5},2);
+		System.out.println(result);
 	}
 
 }

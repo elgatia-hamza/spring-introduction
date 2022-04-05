@@ -7,6 +7,10 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class Application {
 
+	// What are the beans?
+	// What are the dependencies of a bean?
+	// Where to search for beans?
+
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
 		BinarySearchImpl binarySearchAlgorithm = applicationContext.getBean(BinarySearchImpl.class);
